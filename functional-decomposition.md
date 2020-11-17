@@ -74,7 +74,7 @@ fix()
 		- broadcast alert warning for a (colour) car of (model) with (license plate)
 		- wait (predefined y amount of time) // give them time to fix their parking
 		- if covered amount > (predefined threshold) // if true they still didn't respond
-		- tow the car
+		- tow_the_car() // call function
 	
 ## People hogging seats with bags/sitting where they're not supposed to
 
