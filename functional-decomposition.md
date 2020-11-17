@@ -11,11 +11,11 @@
 	- if button pressed
 		- scan input button
 		- if button is positional (letter/number)
-			-if invalid
+			- if invalid
 				-delete all values
 				-display invalid location
 				-restart loop
-			-store position
+			- store position
 		- if button is x
 			- delete all values
 			- restart loop
