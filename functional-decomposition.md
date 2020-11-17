@@ -1,7 +1,5 @@
 # functional deocmposition
 
-Note: I included the software/app within the actual fixing/preventing the problem.
-
 ## vending machine from the machine's perspective
 
 - wait while (no buttons are pressed and no money is inserted)
@@ -60,7 +58,13 @@ Prevention: To prevent the problem, you need to know beforehand the average diam
 ## People who can't park
 
 Fixing: To fix the problem, you can send an alert if someone's car is parked improperly, and if no one answers the alert, tow the car. To check if someone is parked improperly, you can install sensors in the gridlines, and if too much of the sensors is covered for too long, that means someone has parked improperly. 
+		
+Prevention: To prevent the problem, you can simply implement the above function for fixing immediately after a car has parked.
 
+- if sensors become covered for 30 seconds //fair amount of time, don't want to trigger everytime someone accidently crosses a line
+	- trigger fix 
+
+fix()
 - loop
 	- wait (predefined x) amount of time //this is so that you don't waste power by checking every second
 	- check sensors
@@ -71,15 +75,12 @@ Fixing: To fix the problem, you can send an alert if someone's car is parked imp
 		- wait (predefined y amount of time)
 		- if covered amount > (predefined threshold)
 		- tow the car
-		
-Prevention: To prevent the problem, you can simply implement the above function for fixing immediately after a car has parked.
-
-- if sensors become covered for 30 seconds //fair amount of time, don't want to trigger everytime someone accidently crosses a line
-	- trigger fix (above)
 	
 ## People hogging seats with bags/sitting where they're not supposed to
 
 Fixing: To fix the problem, set a scanner on the seat to look for a certain barcode on a ticket. If there is weight on the seat but no scan, it means someone is illegally using the seat. 
+
+Prevention: To prevent the problem, you can preset the seats to be "down" until someone scans the proper ticket. 
 
 - define flag as false for each seat
 - loop 
@@ -105,4 +106,5 @@ Fixing: To fix the problem, set a scanner on the seat to look for a certain barc
 		- do nothing //no one is sitting 
 	- if time up or trip finished
 		- set flag to false
+		- drop seat supports (prevention, not necessary)
 		
