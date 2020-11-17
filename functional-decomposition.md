@@ -72,8 +72,8 @@ fix()
 		- trigger alert
 		- scan car model, colour and license plate.
 		- broadcast alert warning for a (colour) car of (model) with (license plate)
-		- wait (predefined y amount of time)
-		- if covered amount > (predefined threshold)
+		- wait (predefined y amount of time) // give them time to fix their parking
+		- if covered amount > (predefined threshold) // if true they still didn't respond
 		- tow the car
 	
 ## People hogging seats with bags/sitting where they're not supposed to
