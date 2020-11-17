@@ -59,7 +59,7 @@ Prevention: To prevent the problem, you need to know beforehand the average diam
 
 Fixing: To fix the problem, you can send an alert if someone's car is parked improperly, and if no one answers the alert, tow the car. To check if someone is parked improperly, you can install sensors in the gridlines, and if too much of the sensors is covered for too long, that means someone has parked improperly. 
 		
-Prevention: To prevent the problem, you can simply implement the above function for fixing immediately after a car has parked.
+Prevention: To prevent the problem, you can simply implement the function for fixing immediately after a car has parked.
 
 - if sensors become covered for 30 seconds //fair amount of time, don't want to trigger everytime someone accidently crosses a line
 	- trigger fix 
@@ -74,7 +74,7 @@ fix()
 		- broadcast alert warning for a (colour) car of (model) with (license plate)
 		- wait (predefined y amount of time) // give them time to fix their parking
 		- if covered amount > (predefined threshold) // if true they still didn't respond
-		- tow_the_car() // call function
+		- tow_the_car() // call function - I didn't implement it though
 	
 ## People hogging seats with bags/sitting where they're not supposed to
 
