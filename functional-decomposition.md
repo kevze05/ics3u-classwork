@@ -39,7 +39,7 @@ Some of the basic programming concepts used:
 
 ## Cookie does not fit into glass
 
-Fixing: to fix the problem, you need to figure out the diameter of the glass, as well as the diameter of the cookie. Then, you know how to split the cookie so that the diameter of the smaller parts fit within the diameter of the cup.
+Fixing: To fix the problem, you need to figure out the diameter of the glass, as well as the diameter of the cookie. Then, you know how to split the cookie so that the diameter of the smaller parts fit within the diameter of the cup.
 
 - scan cookie diameter 
 - scan cup diameter 
@@ -57,4 +57,52 @@ Prevention: To prevent the problem, you need to know beforehand the average diam
 - display avg diameter of cookie = (avg diameter)
 - dispplay cup size needed: (avg diameter + predefined margin of error)
 
-##
+## People who can't park
+
+Fixing: To fix the problem, you can send an alert if someone's car is parked improperly, and if no one answers the alert, tow the car. To check if someone is parked improperly, you can install sensors in the gridlines, and if too much of the sensors is covered for too long, that means someone has parked improperly. 
+
+- loop
+	- wait (predefined x) amount of time //this is so that you don't waste power by checking every second
+	- check sensors
+	- if covered amount > (predefined threshold)
+		- trigger alert
+		- scan car model, colour and license plate.
+		- broadcast alert warning for a (colour) car of (model) with (license plate)
+		- wait (predefined y amount of time)
+		- if covered amount > (predefined threshold)
+		- tow the car
+		
+Prevention: To prevent the problem, you can simply implement the above function for fixing immediately after a car has parked.
+
+- if sensors become covered for 30 seconds //fair amount of time, don't want to trigger everytime someone accidently crosses a line
+	- trigger fix (above)
+	
+## People hogging seats with bags/sitting where they're not supposed to
+
+Fixing: To fix the problem, set a scanner on the seat to look for a certain barcode on a ticket. If there is weight on the seat but no scan, it means someone is illegally using the seat. 
+
+- define flag as false for each seat
+- loop 
+	- if scanner reads barcode
+		- if correct barcode
+			- set flag to true
+			- display valid code
+			- engage seat supports if not already up 
+		- else
+			- display incorrect code
+	- wait (predefined x) amount of time //this is so that you don't waste power by checking every second
+	- check seat weight and flag
+	- if seat weight true (someone/something is occupying seat)
+		- if flag true
+			- do nothing (paid)
+			- do not check this seat until flag becomes false again
+		- if flag false
+			- trigger warning
+			- display seat stealer
+			- wait (predefined y) amount of time //fair warning
+			- drop seat supports
+	- else
+		- do nothing //no one is sitting 
+	- if time up or trip finished
+		- set flag to false
+		
