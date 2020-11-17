@@ -1,4 +1,4 @@
-# functional deocmposition
+# functional decomposition
 
 ## vending machine from the machine's perspective
 
