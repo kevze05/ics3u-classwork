@@ -19,3 +19,17 @@ hi = int(input("What is the height? "))
 
 volume = le*wi*hi
 print(f"The volume is of the prism is {volume}")
+
+#Question 4
+#---------------------------------
+inp = input("Did you join the Google Meet and mute the teacher? (yes/no) ")
+
+while (True):
+    if (inp == "yes"):
+        print("That's probably not a good idea")
+        break
+    elif (inp == "no"):
+        print("Ok. Good.")
+        break
+    else:
+        input("Invalid input, please try again. (yes/no)")
