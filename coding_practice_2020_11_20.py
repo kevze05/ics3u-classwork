@@ -32,4 +32,4 @@ while (True):
         print("Ok. Good.")
         break
     else:
-        inp = input("Invalid input, please try again. (yes/no)")
+        inp = input("Invalid input, please try again. (yes/no) ")
