@@ -18,5 +18,4 @@ wi = int(input("What is the width? "))
 hi = int(input("What is the height? "))
 
 volume = le*wi*hi
-
 print(f"The volume is of the prism is {volume}")
