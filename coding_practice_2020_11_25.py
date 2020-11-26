@@ -152,3 +152,71 @@ else:
 
 if (tf == False):
     print(f"The sound level is between {bench[lb]} and {bench[ub]}.")
+
+#Exercise 40: Name that Triangle
+
+side1 = int(input("What is the length of the first side? "))
+side2 = int(input("What is the length of the second side? "))
+side3 = int(input("What is the length of the third side? "))
+
+if (side1 == side2 and side2 == side3):
+    print("The triangle is equilateral.")
+elif  (side1 == side2 or side2 == side3 or side3 == side1):
+    print("The triangle is isoceles.")
+else:
+    print("The triangle is scalene.")
+    
+#Exercise 44: Date to Holiday Name
+
+month = input("What is the month? ")
+day = int(input("What is the day? " ))
+
+if (month == "January" and day == 1):
+    print("It is New Year's day! ")
+elif (month == "July" and day == 1):
+    print("It is Canada day! ")
+elif (month == "December" and day == 25):
+    print("It is Christmas day! ")
+else:
+    print("It is not a holiday :( ")
+
+#Exercise 45: What Colour is that Square?
+
+pos = input("What is the position? ")
+
+white_even = ['a','c','e','g']
+white_odd = ['b','d','f','h']
+
+letter = pos[0]
+num = int(pos[1])
+colour = ""
+
+if (letter in white_even):
+    if (num % 2 == 0):
+        colour = "white"
+    else:
+        colour = "black"
+else:
+    if (num % 2 == 0):
+        colour = "black"
+    else:
+        colour = "white"
+
+print(f"{pos} is a {colour} square.")
+
+#Exercise 57: Is it a Leap Year
+
+year = int(input("Enter the year: "))
+
+tf = False
+if (year % 400 == 0):
+    tf = True
+elif (year % 100 == 0):
+    tf = False
+elif (year % 4 == 0):
+    tf = True
+
+if (tf == True):
+    print(f"{year} is a leap year.")
+else:
+    print(f"{year} is not a leap year.")
