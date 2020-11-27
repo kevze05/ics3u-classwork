@@ -21,19 +21,9 @@ def run_loop (start,end,inc):
         i = i+inc
     print()
 
+start_array = [396, -477, -75, -168, -250, -401, 357, 356, 404, -327]
+end_array = [506, 3, 23, -72, 326, 124, 389, 896, 638, -285]
+inc_array = [5, 16, 7, 4, 12, 15, 1, 18, 9, 3]
 
-#--------------------------------
-#SORRY SIR I AM LAZY :/
-#--------------------------------
-
-
-run_loop(396,506,5)
-run_loop(-477,3,16)
-run_loop(-75,23,7)
-run_loop(-168,-72,4)
-run_loop(-250,326,12)
-run_loop(-401,124,15)
-run_loop(-357,389,1)
-run_loop(356,896,18)
-run_loop(404,638,9)
-run_loop(-327,-285,3)
+for i in range(10):
+    run_loop(start_array[i],end_array[i],inc_array[i])
