@@ -53,8 +53,6 @@ big = largest3(num1, num2, num3)
 print(f"The largest out of {num1}, {num2}, and {num3} is {big}.")
 
 str = "Hello World"
-
 f2 = first2(str)
-
 print(f"The first two characters in {str} is {f2}.")
 
